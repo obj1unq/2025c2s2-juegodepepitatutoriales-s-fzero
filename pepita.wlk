@@ -17,9 +17,7 @@ object pepita {
 		return energia
 	}
 	method esAtrapada() {
-	  if (self.position() == silvestre.position()){
 		self.image("pepita-gris.png")
-	  } 
 	}
 	method reiniciar() {
 	  self.position(game.center())
