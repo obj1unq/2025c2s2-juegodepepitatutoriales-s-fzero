@@ -1,6 +1,8 @@
 import wollok.game.*
 import pepita.*
 import silvestre.*
+import direcciones.*
+
 
 
 program pepitaGame {
@@ -13,8 +15,8 @@ program pepitaGame {
 	
 	game.addVisualCharacter(pepita)
 	game.addVisual(silvestre)
-	keyboard.right().onPressDo{silvestre.movimientoD()}
-	keyboard.left().onPressDo{silvestre.movimientoA()}
+	keyboard.right().onPressDo{silvestre.movimiento(derecha)}
+	keyboard.left().onPressDo{silvestre.movimiento(izquierda)}
 	game.onCollideDo(silvestre, {elemento => elemento.esAtrapada()})
 	keyboard.p().onPressDo { pepita.reiniciar()}
 	game.start()	
