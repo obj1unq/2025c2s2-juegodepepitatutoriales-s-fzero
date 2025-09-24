@@ -12,7 +12,9 @@ program pepitaGame {
 	//Valor por defecto game.ground("ground.png")
 	
 	game.addVisualCharacter(pepita)
-	game.addVisualCharacter(silvestre)
+	game.addVisual(silvestre)
+	keyboard.right().onPressDo{silvestre.movimientoD()}
+	keyboard.left().onPressDo{silvestre.movimientoA()}
 	game.onCollideDo(silvestre, {elemento => elemento.esAtrapada()})
 	keyboard.p().onPressDo { pepita.reiniciar()}
 	game.start()	
